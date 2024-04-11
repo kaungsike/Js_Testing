@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .xx{
+            color: red;
+        }
+        .hs-photo{
+            height: 200px;
+            position: fixed;
+            right: 0;
+            top: 100px;
+            transform: translateX(100%);
+            transition-duration: 300ms;
+        }
+        .hs-photo-active{
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body>
+    <h1 class="aa bb cc">Js Query Selector</h1>
+    <p class="a">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima aspernatur harum non dolor ad consequatur ipsam, corporis amet corrupti beatae molestiae praesentium officiis a. Inventore laborum, tempora delectus aperiam earum animi eveniet laudantium voluptates in assumenda ullam libero corporis rem.</p>
+    <br>
+    <br>
+    <img width="100px" id="vonzy" src="../hq720_2.jpg" alt="">
+    <button onclick="changeImg('../a.jpg')">Img 1</button>
+    <button onclick="changeImg('../hq720_2.jpg')">Img 2</button>
+    <button onclick="changeImg('../v.jpg')">Img 3</button>
+
+
+    <hr>
+    <button onclick="toggleImg()">Toggle</button>
+    <br><br>
+    <img class="hs-photo" src="../a.jpg" alt="">
+    <ul class="lists">
+        <li class="a">Apple</li>
+        <li class="b">Orange</li>
+        <li class="b">Mango</li>
+        <li class="a">Banana</li>
+    </ul>
+
+<form action="">
+    <input type="text" name="your_name" id="yourName">
+    <br><br>
+    <div>
+        <label for="">Gender</label>
+        <div>
+            <label for="male">Male</label>
+            <input type="radio" id="male" name="gender" value="male">
+        </div>
+        <div>
+            <label for="female">Female</label>
+            <input type="radio" id="female" name="gender" value="female">
+        </div>
+        <div>
+            <label for="gay">Gay</label>
+            <input type="radio" id="gay" name="gender" value="gay">
+        </div>
+    </div>
+</form>
+
+    <script src="../JS/selector.js"></script>
+</body>
+</html>
