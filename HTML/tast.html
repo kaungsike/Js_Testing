@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <h3 id="heading">San Gyi Dr</h3>
+    
+
+    <button id="btn">Click Me</button> -->
+
+    <ul id="listGroup">
+
+    </ul>
+<!--   -->
+
+
+    <script>
+        const listGroup = document.querySelector("#listGroup")
+        // const listGroup = document.querySelector("#listGroup")
+        // const btn = document.querySelector("#btn");
+        // const heading = document.querySelector("#heading")
+
+        // btn.disabled = false
+        // // heading.disabled = true
+
+        // heading.addEventListener("click", () => {
+        //     console.log("U click Heading")
+        // })
+
+        // btn.addEventListener("click", () => {
+        //     heading.click()
+        // })
+
+        const li = document.createElement("li")
+        // li.innerText = "Apple"
+
+        const textNode = document.createTextNode("Apple")
+        const textNode2 = document.createTextNode(" Par")
+
+
+        li.append(textNode);
+        li.append(textNode2)
+
+        // listGroup.append(li)
+
+        const frg = document.createDocumentFragment();
+        frg.append(li)
+
+        console.dir(frg);
+
+        listGroup.append(frg)
+
+
+        // console.dir(heading)
+        // btn.childNodes[2].textContent = "HaHa";
+        // btn.childNodes[1].remove();
+        // console.dir(btn)
+        console.log(listGroup)
+
+    </script>
+</body>
+</html>

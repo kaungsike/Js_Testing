@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .heading{
+            border: 2px solid black;
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+        }
+        #fruitSelect{
+            width: 150px;
+            height: 40px;
+            margin-top: 50px;
+        }
+        body{
+            height: 4000px;
+        }
+        .list{
+            border: 1px solid black;
+
+        }
+        .list:active{
+            background: rgb(35, 110, 207);
+        }
+        .border{
+            border: 1px solid black;
+            padding: 20px;
+        }
+        /* .border:active{
+            background: rgb(134, 216, 52);
+        } */
+    </style>
+</head>
+<body>
+    <h1 class="heading">My Event Task</h1>
+
+    <!-- <form action="https://mms-it.com" id="testForm">
+        <input type="text" name="" id="textInput">
+        <br>
+        <select name="fruit" id="fruitSelect">
+            <option value="apple">Apple</option>
+            <option value="orange">Orange</option>
+            <option value="mango">Mango</option>
+            <option value="banana">Banana</option>
+        </select>
+        <br><br><br>
+    
+        <input type="file" name="" id="update">
+        <br><br><br><hr>
+        <button>Submit</button> -->
+    <!-- </form> -->
+    <input type="text" name="" id="textInput">
+
+    <ul id="listGroup">
+        <li class="list">Apple</li>
+        <li class="list">Orange</li>
+        <li class="list">Mango</li>
+        <li class="list">Banana</li>
+    </ul>
+    <!-- <input type="text" id="textInput">
+
+    <ul id="listGroup">
+        <li class="list">Orange</li>
+        <li class="list">Mango</li>
+        <li class="list">Banana</li>
+        <li class="list">Apple</li>
+    </ul> -->
+
+    <!-- <div class="box border">
+        <div class="innerBox border">
+            <div class="card border">
+                <h1 class="title border">Event Test</h1>
+                <p class="para border">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, enim?</p>
+            </div>
+        </div>
+    </div> -->
+
+
+    <script>
+
+
+
+//         document.querySelector(".box").addEventListener("click" , (e) => {
+//             e.stopPropagation()
+//             console.log("U click box");
+// })
+//         document.querySelector(".innerBox").addEventListener("click" , (e) => {
+//             e.stopPropagation()
+//             console.log("U click inner box");
+// })
+//         document.querySelector(".card").addEventListener("click" , (e) => {
+//             e.stopPropagation()
+//             console.log("U click card");
+//         })
+//         document.querySelector(".title").addEventListener("click" , (e) => {
+//             console.log("U click title");
+//             e.stopPropagation()
+//         })
+//         document.querySelector(".para").addEventListener("click" , (e) => {
+//     e.stopPropagation()            
+//             console.log("U click para");
+//         })
+
+        
+
+
+
+        const textInput = document.querySelector("#textInput");
+        const listGroup = document.querySelector("#listGroup");
+
+        textInput.addEventListener("keyup" , (e) => {
+            if(e.key==="Enter"){
+                listGroup.append(createList(textInput.value));
+            }
+        })
+
+
+        const createList = (input) => {
+            const list = document.createElement("li");
+            list.innerText = input;
+            list.classList.add("list")
+            return list;
+        }
+
+        const lists = document.querySelectorAll(".list");
+        
+        // lists.forEach( list  => {
+        //     list.addEventListener("click" , () => {
+        //         console.log(list.innerText);
+        //     })
+        // })
+
+        listGroup.addEventListener("click" , (e) => {
+            console.log(e.target);
+        })
+
+        // const heading = document.querySelector(".heading");
+
+        // const events = ["mousemove","mouseover","mouseout"];
+
+        // events.forEach( el => {
+        //     heading.addEventListener( el , (e) => {
+        //         console.log(e.type);
+        //     })
+        // })
+
+        // const lists = document.querySelectorAll(".list");
+        // const textInput = document.querySelector("#textInput")
+        // const listGroup = document.querySelector("#listGroup");
+
+        // const createList = (text) => {
+        //     const list = document.createElement("li");
+        //     list.innerText = text;
+        //     list.classList.add("list")
+        //     return list
+        // }
+        
+        // lists.forEach(list => {
+        //     list.addEventListener("click" , () => {
+        //         console.log(list.innerText);
+        //     })
+        // })
+
+        // listGroup.addEventListener("click", (e) => {
+        //     console.log(e.target);
+        // })
+
+        // textInput.addEventListener("keyup" , (e) => {
+        //     if(e.key === "Enter"){
+        //         listGroup.append(createList(textInput.value));
+        //         textInput.value = null;
+        //     }
+        // })
+
+
+        // const events = ["click","mouseover","mouseout","mousemove"];
+
+        // events.forEach(el => {
+        //     heading.addEventListener(el, (event) => {
+        //         console.log(event.type);
+        //     })
+        // })
+
+        // const textInput = document.querySelector("#textInput");
+        // const fruitSelect = document.querySelector("#fruitSelect");
+        // const update = document.querySelector("#update");
+        // const testForm = document.querySelector("#testForm")
+
+
+        // window.addEventListener("scroll" , (e) => {
+            // console.log("u scroll");
+        //     console.log(e);
+        // })
+
+        // testForm.addEventListener("submit", (e) => {
+        //     e.preventDefault();
+        //     console.log("U submit");
+        // })
+
+
+        // update.addEventListener("change" , () => {
+        //     console.log(update.value);
+        // })
+
+        // fruitSelect.addEventListener("change" , () => {
+        //     console.log(fruitSelect.value);
+        // })
+
+        // const typing = (e) => {
+        //     console.log(e);
+        //     console.log(textInput.value);
+        // }
+
+        // textInput.addEventListener("keyup",typing);
+
+        // textInput.addEventListener("focus" , () => {
+        //     console.log("U Focus");
+        // })
+        // textInput.addEventListener("blur" , () => {
+        //     console.log("U Blur");
+        // })
+
+
+        // const run = (e) => {
+        //     console.log("U click",Math.random());
+        //     console.log(e);
+        // }
+        // heading.addEventListener("click",run)
+        // heading.addEventListener("dblclick",run)
+        // heading.addEventListener("mouseover",run)
+        // heading.addEventListener("mouseleave",run)
+        // heading.addEventListener("mousemove",run)
+        // heading.addEventListener("dblclick",run)
+        // console.dir(Event);
+    </script>
+</body>
+</html>
