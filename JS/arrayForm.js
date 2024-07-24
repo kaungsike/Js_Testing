@@ -1,6 +1,5 @@
 console.log("Hello Array");
 
-
 // const arr = Array.from("array");
 // console.log(arr)
 // console.log(Array.from([1,2,3],(x) => x + x))
@@ -26,3 +25,13 @@ console.log("Hello Array");
 // })
 
 // console.log(Array.from({length : 5},(v,i) => ++i))
+
+const arr = []
+
+console.log(arr)
+
+const run = Array.from({length:5},(_,i) => ++i );
+
+run.map((r) => arr.push(r))
+
+console.log(arr)
