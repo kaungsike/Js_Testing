@@ -25,8 +25,8 @@ fetchDataPromise
 const login = () => {
   const loginPromise = new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve("Login resolve is work!");
-    }, 3000);
+      reject("Login resolve is work!");
+    }, 1000);
   });
 
   return loginPromise;
@@ -36,13 +36,27 @@ const fetchData = () => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve("Data from fetchData is ready!");
-    }, 2000);
+    }, 1000);
   });
 };
 
-login().then((data) => {
-  console.log(data);
-  fetchData().then((data) => {
-    console.log(data);
-  });
-});
+const getData = () => {
+  console.log("Data is Ged!");
+};
+
+login().then(() => {
+  console.log("Hello")
+}).catch((data) => {
+  console.log(data)
+})
+
+
+// login()
+// .then((data) => {
+//   console.log(data);
+//   fetchData()
+//   .then((data) => {
+//     console.log(data);
+//     getData();
+//   });
+// });
